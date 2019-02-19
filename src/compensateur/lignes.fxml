@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compensateur.lignesController">
+   <children>
+      <Button fx:id="suivant" layoutX="848.0" layoutY="598.0" mnemonicParsing="false" onAction="#on_suivant" prefHeight="25.0" prefWidth="110.0" text="COMPENSER &gt;&gt;" textFill="#b50000">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#0ac97a" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="precedent" layoutX="14.0" layoutY="598.0" mnemonicParsing="false" onAction="#on_precedent" prefHeight="25.0" prefWidth="103.0" text="&lt;&lt;RETOUR" textFill="#b50000">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#3be5ff" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tables" layoutX="5.0" layoutY="100.0" prefHeight="469.0" prefWidth="962.0">
+         <columns>
+            <TableColumn fx:id="du_noeud" prefWidth="63.0" text="Du noeud" />
+            <TableColumn fx:id="noeud_depart" prefWidth="101.0" text="Noeud de départ" />
+            <TableColumn fx:id="au_noeud" prefWidth="60.0" text="Au noeud" />
+            <TableColumn fx:id="noeud_arriver" prefWidth="92.0" text="Noeud d'arrivé" />
+            <TableColumn fx:id="num_branche" minWidth="7.0" prefWidth="96.0" text="N° Branche" />
+            <TableColumn fx:id="type_branche" minWidth="0.0" prefWidth="87.0" text="Type Branche" />
+            <TableColumn fx:id="p" prefWidth="61.0" text="P(MW)" />
+            <TableColumn fx:id="q" prefWidth="62.0" text="Q(MVva)" />
+            <TableColumn fx:id="s" prefWidth="49.0" text="S(Mva)" />
+            <TableColumn fx:id="snom" prefWidth="91.0" text="Snom(Mva)" />
+            <TableColumn fx:id="spourcent" prefWidth="59.0" text="S(%Mva)" />
+            <TableColumn fx:id="dp" prefWidth="66.0" text="dP(MW)" />
+            <TableColumn fx:id="dq" prefWidth="74.0" text="dQ(Mvar)" />
+         </columns>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#d3c5c5" />
+               </light>
+            </Lighting>
+         </effect>
+      </TableView>
+      <Label fx:id="chemins" layoutX="512.0" layoutY="32.0" prefHeight="25.0" prefWidth="241.0" />
+      <Label fx:id="titre" layoutX="406.0" layoutY="45.0" prefHeight="25.0" prefWidth="234.0" text="LIGNES DU RESEAU A COMPENSER" textFill="#833232">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

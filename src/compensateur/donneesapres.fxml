@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compensateur.DonneesapresController">
+   <children>
+      <Button fx:id="suivant" layoutX="854.0" layoutY="603.0" mnemonicParsing="false" onAction="#on_suivant" prefHeight="27.0" prefWidth="104.0" text="GRAPHES &gt;&gt;" textFill="#b50000">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#3dff6e" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="precedent" layoutX="10.0" layoutY="603.0" mnemonicParsing="false" onAction="#on_precedent" prefHeight="27.0" prefWidth="89.0" text="&lt;&lt; RETOUR" textFill="#b50000">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#3be5ff" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="417.0" layoutY="14.0" prefHeight="39.0" prefWidth="138.0" text="RECAPITULATIF" textFill="#15bf1b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tables" layoutY="60.0" prefHeight="442.0" prefWidth="972.0">
+         <columns>
+            <TableColumn fx:id="du_noeud" prefWidth="38.0" text="Du N°" />
+            <TableColumn fx:id="noeud_depart" prefWidth="83.0" text="Noeud départ" />
+            <TableColumn fx:id="au_noeud" prefWidth="38.0" text="Au N°" />
+            <TableColumn fx:id="noeud_arrivé" prefWidth="90.0" text="Noeud d'arrivé" />
+            <TableColumn fx:id="circuit" minWidth="7.0" prefWidth="42.0" text="Circuit" />
+            <TableColumn fx:id="type_branche" minWidth="0.0" prefWidth="49.0" text="Type Branche" />
+            <TableColumn fx:id="mva_avant" prefWidth="67.0" text="MVA avant" />
+            <TableColumn fx:id="mva_apres" prefWidth="66.0" text="MVA apres" />
+            <TableColumn fx:id="mva_pour_avant" prefWidth="73.0" text="\%MVA avant" />
+            <TableColumn fx:id="mva_pourcent_apres" prefWidth="73.0" text="\%MVA apres" />
+            <TableColumn fx:id="mw_pe_avant" prefWidth="82.0" text="MW perdu av" />
+            <TableColumn fx:id="mw_pe_apres" prefWidth="94.0" text="MW perdu apres" />
+            <TableColumn fx:id="mvar_av" prefWidth="106.0" text="MVAR perdu avant" />
+            <TableColumn fx:id="mvar_apres" prefWidth="106.0" text="MVAR perdu avant" />
+         </columns>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#c9eecb" />
+               </light>
+            </Lighting>
+         </effect>
+      </TableView>
+      <Label fx:id="PT" layoutX="15.0" layoutY="511.0" prefHeight="33.0" prefWidth="273.0" text="PERTES TOTAL ACTIVES APRES COMPENSATION">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="PTR" layoutX="660.0" layoutY="511.0" prefHeight="33.0" prefWidth="290.0" text="PERTES TOTAL REACTIVES APRES COMPENSATION">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="pp" layoutX="62.0" layoutY="549.0" prefHeight="25.0" prefWidth="20.0" text="&amp;P" textFill="#306825">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="PTN" layoutX="82.0" layoutY="549.0" prefHeight="25.0" prefWidth="138.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="qq" layoutX="716.0" layoutY="549.0" prefHeight="25.0" prefWidth="20.0" text="&amp;Q" textFill="#155411">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="PTRN" layoutX="736.0" layoutY="549.0" prefHeight="25.0" prefWidth="138.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>
